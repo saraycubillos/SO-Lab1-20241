@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef struct LineNode {
+    char* line;
+    struct LineNode* next;
+} LineNode;
 
 int main (int argc, char *argv[]){
     FILE *file;
@@ -9,6 +13,8 @@ int main (int argc, char *argv[]){
     char *line = NULL;
     size_t len = 0;
     size_t read;
+
+    LineNode* head = NULL; 
     
 
     //verificar que el usuario proporciona la cantidad correcta de archivos de entrada
@@ -61,32 +67,11 @@ int main (int argc, char *argv[]){
 
 //-----------------------------------------------//
  
-    int i = 0;
     // Leer y mostrar cada línea del archivo
     while ((read = getline(&line, &len, file)) != -1) {
         i++;
         printf("%s", line);
     }
-    printf("%d\n", i);
-
-    //Crear el arreglo temporal
-    // char **arr = (char**)malloc(i * sizeof(char*));
-    // arr[0] = "Hello";
-    // arr[1] = "World";
-    // printf("%s\n", arr[0]);
-
-    //x = (int*)malloc(sizeof(int)*cantidad);
-
-    //Ingresar al arreglo temporal
-    // while ((read = getline(&line, &len, file)) != -1) {
-    //     arr[i] = line;
-    //     printf("%s", line);
-    // }
-
-    //Ingresarlo en el out al reves
-    // for (int j = i-1; j > 0; j--){
-    //     fprintf(file2, "%s", arr[j]);
-    // }
 
     return 1;
 }
