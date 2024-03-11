@@ -61,13 +61,13 @@ int main (int argc, char *argv[]){
 
 //-----------------------------------------------//
  
-    int i = 0;
-    // Leer y mostrar cada línea del archivo
-    while ((read = getline(&line, &len, file)) != -1) {
-        i++;
-        printf("%s", line);
-    }
-    printf("%d\n", i);
+    // int i = 0;
+    // // Leer y mostrar cada línea del archivo
+    // while ((read = getline(&line, &len, file)) != -1) {
+    //     i++;
+    //     printf("%s", line);
+    // }
+    // printf("%d\n", i);
 
     //Crear el arreglo temporal
     // char **arr = (char**)malloc(i * sizeof(char*));
