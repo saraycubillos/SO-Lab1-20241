@@ -1,7 +1,27 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/miguel/SO-Lab1-20241/reverse", // Reemplaza <tu-programa> con el nombre de tu archivo ejecutable
+            "args": [
+                "/home/miguel/SO-Lab1-20241/in.txt",
+                "/home/miguel/SO-Lab1-20241/out.txt"
+            ], // Aquí puedes poner cualquier argumento que tu programa necesite
+            "stopAtEntry": false,
+            "cwd": "/home/miguel/SO-Lab1-20241",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
 }
