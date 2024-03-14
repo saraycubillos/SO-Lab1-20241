@@ -79,8 +79,6 @@ int main (int argc, char *argv[]){
 
             printf("Ingrese otra linea ó Ingrese un 0 para terminar: ");
 
-            
-
         }
         imprimirLista(head);
 
